@@ -1,5 +1,6 @@
 package com.example.android.a4musicapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -39,6 +40,8 @@ public class Dance extends AppCompatActivity {
         final ListView listView = findViewById(R.id.list_view2);
         listView.setAdapter(songsAdapter);
 
+        
+
 
         //make Toast after clicking on item on the ListView
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -46,18 +49,13 @@ public class Dance extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
                 final SongConstuctor artist = (SongConstuctor) listView.getItemAtPosition(position);
 
-                //select song when clicking on listView with all songs (background turns grey)
-//                listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-//                view.setSelected(true);
 
                 //make toast when pressed "play" button after selecting song
                 ImageView play = findViewById(R.id.imgbtn_play);
-
                 if (listView.hasFocus()) {
-
                     play.setOnClickListener(new View.OnClickListener() {
-                       @Override
-                         public void onClick(View v) {
+                        @Override
+                        public void onClick(View v) {
                             LinearLayout layout = (LinearLayout) toast.getView();
                             if (layout.getChildCount() > 0) {
                                 TextView tv = (TextView) layout.getChildAt(0);
@@ -66,32 +64,51 @@ public class Dance extends AppCompatActivity {
                             }
                             toast.show();
                         }
-//                    })else if {
-//                    Toast.makeText(getApplicationContext(), "select first", Toast.LENGTH_SHORT).show();
 
-                        //TODO no play with no focus??
-                        //
                         Toast toast = Toast.makeText(getApplicationContext(), "Now playing: " + "\n" + artist.getTitle() + "\n" + artist.getArtist(), Toast.LENGTH_SHORT);
-
-                        //this is code for custom toast, center, textSize changed
                     });
                 }
 
 
-                //deselect item from listView after clicking pause button
+                //pause button for "music stopped" toast
                 ImageView pause = findViewById(R.id.imgbtn_pause);
-                pause.setOnClickListener(new View.OnClickListener() {
+                if (listView.hasFocus()) {
+
+                    pause.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+
+                            listView.clearFocus();
+                            listView.clearChoices();
+
+
+
+                            LinearLayout layout = (LinearLayout) toast.getView();
+                            if (layout.getChildCount() > 0) {
+                                TextView tv = (TextView) layout.getChildAt(0);
+                                tv.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL);
+                                tv.setTextSize(28);
+                            }
+                            toast.show();
+                        }
+                        Toast toast = Toast.makeText(getApplicationContext(), "Music stopped", Toast.LENGTH_SHORT);
+                    });
+                }
+
+
+                // back button for changing to MainActivity screen
+                ImageView btnBack = findViewById(R.id.imgbtn_back);
+                btnBack.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        listView.clearChoices();
+                        Intent backIntent = new Intent(Dance.this, MainActivity.class);
+                        startActivity(backIntent);
                     }
                 });
-
-
             }
         });
-
-
     }
 }
+
+
 
