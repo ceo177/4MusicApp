@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">4 Music App</string>
     <string name="main_bar_title">Library</string>
+    <string name="play_instruction">Click on song list then press play button</string>
+    <string name="welcome_text">Welcome in your music player! Please choose your genre</string>
 
 </resources>

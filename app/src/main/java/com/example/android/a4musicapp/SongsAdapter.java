@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -33,6 +34,9 @@ public class SongsAdapter extends ArrayAdapter<SongConstuctor> {
 
         TextView songTitle = listItemView.findViewById(R.id.txt_songTitle);
         songTitle.setText(currentSongConstructor.getTitle());
+
+        ImageView genreImg = listItemView.findViewById(R.id.img_genre);
+        genreImg.setImageResource(currentSongConstructor.getImgResId());
 
 
 

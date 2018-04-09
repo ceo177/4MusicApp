@@ -6,14 +6,17 @@
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:padding="10dp"
-    android:background="@drawable/selector_after_clicking_item_on_lview">
+    android:background="@drawable/selector_after_clicking_item_on_lview"
+    >
+    <!--set selector in drawable as background-->
+
 
 
     <ImageView
         android:id="@+id/img_genre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher" />
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        />
 
     <LinearLayout
         android:layout_width="0dp"
@@ -27,13 +30,15 @@
         <TextView
             android:id="@+id/txt_songTitle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/listView_textColor"/>
 
         <TextView
             android:id="@+id/txt_artistName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/selector_after_clicking_item_on_lview"/>
+            android:textColor="@color/listView_textColor2"
+           />
 
     </LinearLayout>
 </LinearLayout>

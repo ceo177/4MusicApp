@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1a2f2f"
     android:orientation="vertical"
     tools:context="com.example.android.a4musicapp.MainActivity">
 
@@ -12,7 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="choose your genre"
+        android:text="@string/welcome_text"
+        android:textAlignment="center"
+        android:textColor="#48BF13"
+
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -25,7 +29,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
-        android:text="POP" />
+        android:background="@drawable/button_genres"
+        android:text="POP"
+        android:textColor="#48BF13"
+
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btn_hiphop"
@@ -33,7 +41,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
-        android:text="Hip Hop" />
+        android:background="@drawable/button_genres"
+        android:text="Hip Hop"
+        android:textColor="#48BF13"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btn_dance"
@@ -41,6 +52,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
-        android:text="DANCE" />
+        android:background="@drawable/button_genres"
+        android:text="DANCE"
+        android:textColor="#48BF13"
+        android:textSize="24sp" />
 
 </LinearLayout>

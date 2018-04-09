@@ -9,11 +9,13 @@ public class SongConstuctor {
     //variables
     private String artist;
     private String songTitle;
+    private int imgResId;
 
 
-    public SongConstuctor(String artistName, String songTitlename) {
+    public SongConstuctor(String artistName, String songTitlename, int imgRes ) {
         artist = artistName;
         songTitle = songTitlename;
+        imgResId = imgRes;
     }
 
 
@@ -26,6 +28,11 @@ public class SongConstuctor {
     public String getTitle()
     {
         return songTitle;
+    }
+
+    public int getImgResId()
+    {
+        return imgResId;
     }
 }
 

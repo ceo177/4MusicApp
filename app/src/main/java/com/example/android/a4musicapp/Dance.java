@@ -30,17 +30,25 @@ public class Dance extends AppCompatActivity {
         ArrayList<SongConstuctor> songs = new ArrayList<SongConstuctor>();
 
         //list of songs
-        songs.add(new SongConstuctor("The Village People", "Y.M.C.A"));
-        songs.add(new SongConstuctor("Bee Gees", "Night Fever"));
-        songs.add(new SongConstuctor("Abba", "Dancing Queen"));
-        songs.add(new SongConstuctor("The Pointer Sister", "I'm So Excited"));
-        songs.add(new SongConstuctor("Sister Sledge", "We Are Family"));
+        songs.add(new SongConstuctor("The Village People", "Y.M.C.A", R.drawable.dance));
+        songs.add(new SongConstuctor("Bee Gees", "Night Fever", R.drawable.dance));
+        songs.add(new SongConstuctor("Abba", "Dancing Queen", R.drawable.dance));
+        songs.add(new SongConstuctor("The Pointer Sister", "I'm So Excited", R.drawable.dance));
+        songs.add(new SongConstuctor("Sister Sledge", "We Are Family", R.drawable.dance));
 
         SongsAdapter songsAdapter = new SongsAdapter(this, songs);
         final ListView listView = findViewById(R.id.list_view2);
         listView.setAdapter(songsAdapter);
 
-        
+        // back button for changing to MainActivity screen
+        ImageView btnBack = findViewById(R.id.imgbtn_back);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent backIntent = new Intent(Dance.this, MainActivity.class);
+                startActivity(backIntent);
+            }
+        });
 
 
         //make Toast after clicking on item on the ListView
@@ -78,9 +86,9 @@ public class Dance extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
 
-                            listView.clearFocus();
-                            listView.clearChoices();
-
+                            ListView list2 = findViewById(R.id.list_view2);
+                            list2.clearFocus();
+                            list2.clearChoices();
 
 
                             LinearLayout layout = (LinearLayout) toast.getView();
@@ -91,20 +99,12 @@ public class Dance extends AppCompatActivity {
                             }
                             toast.show();
                         }
+
                         Toast toast = Toast.makeText(getApplicationContext(), "Music stopped", Toast.LENGTH_SHORT);
                     });
                 }
 
 
-                // back button for changing to MainActivity screen
-                ImageView btnBack = findViewById(R.id.imgbtn_back);
-                btnBack.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent backIntent = new Intent(Dance.this, MainActivity.class);
-                        startActivity(backIntent);
-                    }
-                });
             }
         });
     }

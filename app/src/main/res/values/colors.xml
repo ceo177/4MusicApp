@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#4caf50</color>
-    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorPrimaryDark">#1A2F2F</color>
     <color name="colorAccent">#ff4081</color>
-    <color name="whenSelected">#BDBDBD</color>
+    <color name="whenSelected">#2F260A</color>
+    <color name="listView_textColor">#A3BF34</color>
+    <color name="listView_textColor2">#9C7B2F</color>
 
 
 </resources>

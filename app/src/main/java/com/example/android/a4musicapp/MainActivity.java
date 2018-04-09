@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-       // TextView genre = (TextView) findViewById(R.id.txt_genre);
+
 
 
         //start intent POP
