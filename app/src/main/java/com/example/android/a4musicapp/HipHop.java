@@ -29,7 +29,7 @@ public class HipHop extends AppCompatActivity {
 
         //list of songs
         songs.add(new SongConstuctor("Grandmaster Flash", "The Message", R.drawable.hiphop));
-        songs.add(new SongConstuctor("Sugarhill Gang", "Rapper's delight",R.drawable.hiphop));
+        songs.add(new SongConstuctor("Sugarhill Gang", "Rapper's delight", R.drawable.hiphop));
         songs.add(new SongConstuctor("Africa Bambaataa", "Soulsonic Force", R.drawable.hiphop));
         songs.add(new SongConstuctor("Run DMC", "Sucker's MC", R.drawable.hiphop));
         songs.add(new SongConstuctor("Getto Boys", "Mind Playing Tricks on Me", R.drawable.hiphop));

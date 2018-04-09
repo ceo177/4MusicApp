@@ -6,6 +6,7 @@
     <color name="whenSelected">#2F260A</color>
     <color name="listView_textColor">#A3BF34</color>
     <color name="listView_textColor2">#9C7B2F</color>
+    <color name="btn_genreColor">#48BF13</color>
 
 
 </resources>

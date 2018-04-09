@@ -14,9 +14,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-
-
         //start intent POP
         Button btnPop = findViewById(R.id.btn_pop);
 

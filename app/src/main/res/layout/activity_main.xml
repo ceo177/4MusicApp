@@ -15,7 +15,7 @@
         android:padding="10dp"
         android:text="@string/welcome_text"
         android:textAlignment="center"
-        android:textColor="#48BF13"
+        android:textColor="@color/btn_genreColor"
 
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,8 +30,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
         android:background="@drawable/button_genres"
-        android:text="POP"
-        android:textColor="#48BF13"
+        android:text="@string/pop"
+        android:textColor="@color/btn_genreColor"
 
         android:textSize="24sp" />
 
@@ -42,8 +42,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
         android:background="@drawable/button_genres"
-        android:text="Hip Hop"
-        android:textColor="#48BF13"
+        android:text="@string/hip_hop"
+        android:textColor="@color/btn_genreColor"
         android:textSize="24sp" />
 
     <Button
@@ -53,8 +53,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_margin="20dp"
         android:background="@drawable/button_genres"
-        android:text="DANCE"
-        android:textColor="#48BF13"
+        android:text="@string/dance"
+        android:textColor="@color/btn_genreColor"
         android:textSize="24sp" />
 
 </LinearLayout>
